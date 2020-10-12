@@ -1,2 +1,2 @@
 # Sistema-de-riego-
-Sistema de riego automatizado, aplicacion android, pagina web, modulo wifi y bluetooth
+Sistema de riego automatizado - app android y bluetooth - app web y wifi 
