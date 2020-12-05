@@ -1,2 +1,2 @@
 # Sistema-de-riego-
-Sistema de riego automatizado - app android y bluetooth - app web y wifi 
+Sistema de riego automatizado y monitoreado a través de una aplicación web y aplicación movil, utilizando modulo WiFi(ESP8266) y modulo bluetooth.
