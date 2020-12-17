@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sistema de riego</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src='mqttws31.js' type='text/javascript'></script> 	
+	 </head>
+	<body class="is-preload">
+
+		<!-- Imagen Fondo -->
+		<div id="page-wrapper">			
+			<tr>
+				<td>
+				<img src="Inicio.png"width="1349" height="300" alt="" title="Sistema de riego" />
+				<div style="position: absolute; top: 10px; left: 500px;"><h1><FONT face ="time, serif" SIZE=20 style = "color:black" >SISTEMA DE RIEGO</FONT></h1>	
+				 </div>
+				 </td>
+			 </tr>
+			<!-- Menu -->
+			<div id="header-x">
+				<center>
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="index.html" face ="time, serif" SIZE=20 style = "color:whitesmoke">Inicio</a></li>
+							<li><a href="Graficas.html" face ="time, serif" SIZE=20 style = "color:whitesmoke">Graficas</a></li>
+							<li><a href="Cultivos.html" face ="time, serif" SIZE=20 style = "color:whitesmoke">Cultivos</a></li>							
+						 </ul>
+					 </nav>
+				 </center> 
+			 </div>
+			<!-- Highlights -->
+			<section class="wrapper style1">
+				<div class="container">
+					<div class="row gtr-200">
+						<section class="col-4 col-12-narrower">
+							<div class="box highlight">
+								<i class="fa fa-pagelines fa-5x"title="Riego Manual" aria-hidden="true" style="color:limegreen"></i>
+								<h3>Informacion del suelo:</h3>
+								<p><a>Humedad del suelo : </a>
+								<a id ="humedadDelSuelo" title="Datos enviados desde el modulo wifi hasta la pagina web en tiempo real.">-</a>
+							     </p>
+							 </div>
+						 </section>
+						<section class="col-4 col-12-narrower">
+							<div class="box highlight">
+								<i class="fa fa-snowflake-o fa-5x" title="Humedad del ambiente"aria-hidden="true" style="color:lightseagreen"></i>
+								<h3>Informacion del ambiente:</h3>
+								<p><a>Humedad del ambiente : </a>
+								<a id ="humedadAmbiente"title="Datos enviados desde el modulo wifi hasta la pagina web en tiempo real.">-</a>
+							     </p>
+							 </div>
+						 </section>
+						<section class="col-4 col-12-narrower">
+							<div class="box highlight">
+								<i class="fa fa-thermometer-half fa-5x"title="Temperatura" aria-hidden="true" style="color:rgb(255, 42, 42)"></i> 															<h3>Informacion temperatura:</h3>
+								<p><a>Temperatura: </a>
+								<a id ="temperaturaAmbiente"title="Datos enviados desde el modulo wifi hasta la pagina web en tiempo real.">-</a>
+							     </p>
+							 </div>
+						 </section>							       														
+					 </div>
+				 </div>	
+			 </section>
+            <!--configuracion  manual-->
+			<section>
+				<div>
+					<center>						
+						<h2>Configura tu cultivo</h2>
+					 </center>					
+				 </div>
+				<section style="position: absolute; top: 950px; left: 250px;">
+					<div>
+						<a>Riego manual </a>
+						<button type='button' onclick='OnOff("ON")'>ON</button>
+						<button type='button' onclick='OnOff("OFF")'>OFF</button>
+					 </div>
+
+					<!--funcion range para aumentar y diminuir salida analogica del rango de humedad -->	
+				    </br></br></br></br></br></br>			
+					<div > 
+						<a>Rango de humedad suelo </a>
+						<input type="range" id="myRange"  min="0" max="100"  onmouseup="enviarSalidaAnalogica()">
+					 </div>
+				 </section> 
+
+				<center>
+				<section class="col-4 col-12-narrower" style="position: absolute; top: 850px; left: 720px;">
+					<div class="box highlight">
+						<i class="fa fa-tint fa-5x" title="Humedad del suelo"aria-hidden="true" style="color:rgb(56, 97, 231)"></i>
+						<h3>Informacion del riego</h3>
+						<p><a>Riego Manual: </a>
+						<a id ="riegoManual"title="Datos enviados desde el modulo wifi hasta la pagina web en tiempo real.">-</a>
+						 </p>
+					 </div>
+				 </section>
+				<section class="col-4 col-12-narrower" style="position: absolute; top: 1050px; left: 650px;">
+					<div class="box highlight">
+						<i class="fa fa-tree fa-4x" aria-hidden="true" style="color:green" ></i>
+						<h3>Informacion del rango humedad suelo</h3>
+						<p><a>Humedad suelo minima: </a>
+						<a id ="salidaAnalogica">-</a>
+						 </p>										
+					 </div>
+			     </section>
+			    </center>
+			 </section>	
+			
+			<script src="comunicacion MQTT.js">   
+			 </script>	
+
+			<!-- Footer -->
+			<div id="footer" style="position: absolute; top: 1300px; left: 50px;">
+				<div class="container">
+					<div class="row">
+					 </div> 
+				 </div>
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+				</ul>
+			    <!-- Copyright -->
+				 <div class="copyright">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved</li><li>Design: Sistema@gmail.com</a></li>
+					 </ul>
+				 </div>				
+		     </div>
+	     </div>
+	    <!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
