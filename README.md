@@ -1,2 +1,2 @@
 # Sistema-de-riego-WiFi-NodeMCU
-Sistema de riego automatizado y controlado a través de una aplicación web cliente en lenguaje javaScript y un servidor en CloudMQTT, desarrollado en la plataforma IoT de código abierto y modulo WiFi NodeMCU ESP8266, programado en lenguaje C++ desde el ID de Arduino.
+Sistema de riego automatizado y controlado a través de una aplicación web cliente desarrollada en html, CSS, javaScript y desarrollado en la plataforma IoT de código abierto y microcontrolador NodeMCU ESP8266 con procesador de 32 bits, pines GPIO, interfaces UART, conectividad WiFi y programado en lenguaje C++, enviando y recibiendo datos en tiempo real desde el microcontrolador a la aplicación web implementando servicios de CloudMQTT.
